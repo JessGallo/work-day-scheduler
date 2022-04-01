@@ -24,3 +24,4 @@ THEN the saved events persist/
 ![mock-up](assets/images/mock-up.gif)
 
 ## Website
+https://jessgallo.github.io/work-day-scheduler/
