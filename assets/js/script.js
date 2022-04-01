@@ -6,3 +6,4 @@ var displayDate = function() {
 };
 
 displayDate();
+
