@@ -3,7 +3,7 @@
 ## User Story
 AS AN employee with a busy schedule\
 I WANT to add important events to a daily planner\
-SO THAT I can manage my time effectively\
+SO THAT I can manage my time effectively
 
 ## Acceptance Criteria
 GIVEN I am using a daily planner to create a schedule\
@@ -18,7 +18,7 @@ THEN I can enter an event\
 WHEN I click the save button for that time block\
 THEN the text for that event is saved in local storage\
 WHEN I refresh the page\
-THEN the saved events persist\
+THEN the saved events persist
 
 ## Mock-Up
 ![mock-up](assets/images/mock-up.gif)
