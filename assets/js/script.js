@@ -113,6 +113,11 @@ var adjustTask = function () {
 
 adjustTask();
 
+// audit task time-intervals every 30 seconds
+setInterval(function() {
+    adjustTask();
+  }, 30000);
+
 
 
 
