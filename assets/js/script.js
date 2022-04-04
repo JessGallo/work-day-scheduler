@@ -1,6 +1,16 @@
 const m = moment();
 var currentDay = document.querySelector("#currentDay");
 var currentHour = m.format("k");
+var task9 = document.querySelector("#task9");
+var task9Btn = document.querySelector("#task9Btn");
+var task10 = document.querySelector("#task10");
+var task11 = document.querySelector("#task11");
+var task12 = document.querySelector("#task12");
+var task13 = document.querySelector("#task13");
+var task14 = document.querySelector("#task14");
+var task15 = document.querySelector("#task15");
+var task16 = document.querySelector("#task16");
+var task17 = document.querySelector("#task17");
 
 //display date in jumbotron
 var displayDate = function() {
@@ -11,7 +21,6 @@ displayDate();
 
 //change task color with passing hour
 var adjustTask = function () {
-    var task9 = document.querySelector("#task9");
     if(9 == currentHour) {
         task9.classList.add("present");
     }
@@ -21,8 +30,7 @@ var adjustTask = function () {
     else if(9 > currentHour) {
         task9.classList.add("future");
     }
-
-    var task10 = document.querySelector("#task10");
+    
     if(10 == currentHour) {
         task10.classList.add("present");
     }
@@ -33,7 +41,6 @@ var adjustTask = function () {
         task10.classList.add("future");
     }
 
-    var task11 = document.querySelector("#task11");
     if(11 == currentHour) {
         task11.classList.add("present");
     }
@@ -44,7 +51,6 @@ var adjustTask = function () {
         task11.classList.add("future");
     }
 
-    var task12 = document.querySelector("#task12");
     if(12 == currentHour) {
         task12.classList.add("present");
     }
@@ -55,7 +61,6 @@ var adjustTask = function () {
         task12.classList.add("future");
     }
 
-    var task13 = document.querySelector("#task13");
     if(13 == currentHour) {
         task13.classList.add("present");
     }
@@ -66,7 +71,6 @@ var adjustTask = function () {
         task13.classList.add("future");
     }
 
-    var task14 = document.querySelector("#task14");
     if(14 == currentHour) {
         task14.classList.add("present");
     }
@@ -77,7 +81,6 @@ var adjustTask = function () {
         task14.classList.add("future");
     }
 
-    var task15 = document.querySelector("#task15");
     if(15 == currentHour) {
         task15.classList.add("present");
     }
@@ -88,7 +91,6 @@ var adjustTask = function () {
         task15.classList.add("future");
     }
 
-    var task16 = document.querySelector("#task16");
     if(16 == currentHour) {
         task16.classList.add("present");
     }
@@ -98,8 +100,6 @@ var adjustTask = function () {
     else if(16 > currentHour) {
         task16.classList.add("future");
     }
-
-    var task17 = document.querySelector("#task17");
     if(17 == currentHour) {
         task17.classList.add("present");
     }
@@ -113,11 +113,17 @@ var adjustTask = function () {
 
 adjustTask();
 
+//store data to localStorage
+var loadTasks = function() {
+    task9 = JSON.parse(localStorage.getItem("task9"));
+};
+
+var saveTasks = function() {
+    localStorage.setItem("task9", JSON.stringify(tasks));
+  };
+
+
 // audit task time-intervals every 30 seconds
 setInterval(function() {
     adjustTask();
   }, 30000);
-
-
-
-
